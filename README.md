@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
   ```
   
   # 2. Aligning widgets evenly
-  ![alt text](https://github.com/temidtech/Fluter-Cheat-Sheet/screenshots/img1.png)
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img1.PNG)
    ```java
    
    ```
