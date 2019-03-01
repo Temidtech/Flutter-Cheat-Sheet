@@ -41,3 +41,9 @@ Widget build(BuildContext context) {
 );
 }
   ```
+  
+  # 2. Aligning widgets evenly
+  ![alt text](https://github.com/temidtech/Fluter-Cheat-Sheet/screenshots/img1.png)
+   ```java
+   
+   ```
