@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
   ```
   
   # 2. Aligning widgets evenly
-  ## MainAxisAlignment
+  ##   MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free horizontal space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img1.PNG)
