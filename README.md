@@ -79,12 +79,25 @@ Widget build(BuildContext context) {
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
    
    ```java
-   Column(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    Image.asset('img/1.jpg'),
-    Image.asset('img/2.jpg'),
-    Image.asset('img/3.jpg'),
-  ],
-);
+   new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  new RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: addNumbers,
+                    child: new Text("Plus"),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Minus",
+                    ),
+                  ),
+                ],
+              )
  ```
