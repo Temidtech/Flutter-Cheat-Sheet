@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
   ##   Horizontal MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free horizontal space 
     evenly between, before, and after each image
-  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img1.PNG)
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/img1.PNG)
    ```dart
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
     but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. 
     The following example uses this property to pack 3 buttons together.
     
- <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/Packing-widget.png" width="280"/> 
    
    ```dart
         new Row(
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
     Do you want to add an elevation effect to your button? Use the snippet below
     Please avoid using elevated buttons on already-elevated content such as dialogs or cards.
     
- <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Raised-button.png" width="280"/> 
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/Raised-button.png" width="280"/> 
    
    ```dart
          new Row(
@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
   ##  Toggle Effect
     You can toggle the color of a raised button with few lines. The snippet below shows how you can achieve this.
     
- <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/toggle-button.png" width="280"/> 
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/toggle-button.png" width="280"/> 
    
    ```dart
    1. This button will need to be created in the build of a State of a StatefulWidget
@@ -171,7 +171,7 @@ Widget build(BuildContext context) {
   ##  Floating Action Button
     Creating a simple FAB using the code snippet below
     
- <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/fab-button.png" width="280"/> 
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/fab-button.png" width="280"/> 
    
    ```dart
     return new Scaffold(
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
 Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd write some complex code to make this happen. But see how I achieved it!
 
 ### Create a Bottom Navigation Bar without style
-<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/bottom-bar-1.png" width="280"/> 
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-1.png" width="280"/> 
    
    ```dart
     return new Scaffold(
@@ -222,7 +222,7 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
      );
  ```
  ### Create a Bottom Navigation Bar with custom style
-<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/bottom-bar-2.png" width="280"/> 
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-2.png" width="280"/> 
    
    ```dart
     return new Scaffold(
