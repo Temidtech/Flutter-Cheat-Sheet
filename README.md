@@ -58,7 +58,7 @@ Widget build(BuildContext context) {
 );
    ```
  ##   Vertical MainAxisAlignment
-    Setting the main axis alignment to spaceEvenly divides the free horizontal space 
+    Setting the main axis alignment to spaceEvenly divides the free vertical space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img2.PNG)
    ```java
