@@ -72,8 +72,10 @@ Widget build(BuildContext context) {
 );
  ```
   ##   Packing Widgets
-    By default, a row or column occupies as much space along its main axis as possible, but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. The following example uses this property to pack 3 buttons together
-  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/packing-widgets.jpg)
+    By default, a row or column occupies as much space along its main axis as possible,
+    but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. 
+    The following example uses this property to pack 3 buttons together
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/packing-widgets.png)
    ```java
    Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
