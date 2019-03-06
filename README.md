@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
    
    ```java
-   new Row(
+        new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new RaisedButton(
