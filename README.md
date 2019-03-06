@@ -110,6 +110,8 @@ Widget build(BuildContext context) {
                 ],
               )
  ```
+ 
+ # 3. Buttons
  ##  Raised Button Effect
     A Raised button is based on a Material widget whose Material.elevation increases when the button is pressed.
     Do you want to add an elevation effect to your button? Use the snippet below
