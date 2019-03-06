@@ -76,7 +76,7 @@ Widget build(BuildContext context) {
     but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. 
     The following example uses this property to pack 3 buttons together.
     
- <img src="(https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
    
    ```java
    Column(
