@@ -5,7 +5,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 # 1. Layouts
 ##   Card Layout
 
-```java
+```dart
 @override
 Widget build(BuildContext context) {
   return Card(
@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
     Setting the main axis alignment to spaceEvenly divides the free horizontal space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img1.PNG)
-   ```java
+   ```dart
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
     Setting the main axis alignment to spaceEvenly divides the free vertical space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img2.PNG)
-   ```java
+   ```dart
    Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Packing-widget.png" width="280"/> 
    
-   ```java
+   ```dart
         new Row(
                mainAxisSize: MainAxisSize.min, // This is the magic. :)
                 children: <Widget>[
@@ -120,7 +120,7 @@ Widget build(BuildContext context) {
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Raised-button.png" width="280"/> 
    
-   ```java
+   ```dart
          new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/toggle-button.png" width="280"/> 
    
-   ```java
+   ```dart
    1. This button will need to be created in the build of a State of a StatefulWidget
    2. The State must have a member variable bool isPressed = false;;
          new Row(
@@ -173,7 +173,7 @@ Widget build(BuildContext context) {
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/fab-button.png" width="280"/> 
    
-   ```java
+   ```dart
     return new Scaffold(
         appBar: new AppBar(
           title: new Text("FAB Example"),
