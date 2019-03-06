@@ -80,13 +80,52 @@ Widget build(BuildContext context) {
    
    ```java
         new Row(
+               mainAxisSize: MainAxisSize.min, // This is the magic. :)
+                children: <Widget>[
+                  new RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: onClick, // Button onClick function
+                    child: new Text("Button 1"),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Button 2",
+                    ),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Button 3",
+                    ),
+                  ),
+                ],
+              )
+ ```
+ ##  Raised Button Effect
+    A Raised button is based on a Material widget whose Material.elevation increases when the button is pressed.
+    Do you want to add an elevation effect to your button? Use the snippet below
+    Please avoid using elevated buttons on already-elevated content such as dialogs or cards.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/Raised-button.png" width="280"/> 
+   
+   ```java
+         new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   new RaisedButton(
                     padding: const EdgeInsets.all(8.0),
                     textColor: Colors.white,
                     color: Colors.blue,
-                    onPressed: addNumbers,
+                    onPressed: onClick, // Button onClick function
                     child: new Text("Plus"),
                   ),
                   new RaisedButton(
