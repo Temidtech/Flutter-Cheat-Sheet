@@ -167,3 +167,22 @@ Widget build(BuildContext context) {
                 ],
               )
  ```
+ 
+  ##  Floating Action Button
+    Creating a simple FAB using the code snippet below
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/fab-button.png" width="280"/> 
+   
+   ```java
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => {},
+          tooltip: 'Add me!',
+          child: Icon(Icons.add),
+        ),
+        body:...
+     );
+ ```
