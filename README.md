@@ -2,7 +2,7 @@
 You need to get started quickly with Flutter? Here are some cheats that will help you build your next billion dollar app!!
 
 
-# 1. Layout
+# 1. Layouts
 ##   Card Layout
 
 ```java
@@ -140,6 +140,30 @@ Widget build(BuildContext context) {
                       "Minus",
                     ),
                   ),
+                ],
+              )
+ ```
+  ##  Toggle Effect
+    You can toggle the color of a raised button with few lines. The snippet below shows how you can achieve this.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/toggle-button.png" width="280"/> 
+   
+   ```java
+   1. This button will need to be created in the build of a State of a StatefulWidget
+   2. The State must have a member variable bool isPressed = false;;
+         new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  
+                  new RaisedButton(
+                    child: new Text('Toggle me!'),
+                    textColor: Colors.white,
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0),
+                    ),
+                    color: isPressed ? Colors.grey : Colors.blue,
+                    onPressed: () => setState(() => isPressed = !isPressed), // make state changes in a setState
+                  )
                 ],
               )
  ```
