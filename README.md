@@ -186,3 +186,71 @@ Widget build(BuildContext context) {
         body:...
      );
  ```
+
+ # 3. Navigation
+ 
+
+## Bottom Navigation Bar
+Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd write some complex code to make this happen. But see how I achieved it!
+
+### Create a Bottom Navigation Bar without style
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/bottom-bar-1.png" width="280"/> 
+   
+   ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+        bottomNavigationBar:BottomNavigationBar(
+          currentIndex: 0,   // Set initial state of BottomNavigationBar
+          items: [           // Create your BottomNavigationBar items
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.playlist_add),
+              title: new Text("Playlist"),
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.person),
+              title: new Text("My Profile")
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.mail),
+              title: new Text("Inbox")
+            )
+          ],
+        ),
+        body:...
+     );
+ ```
+ ### Create a Bottom Navigation Bar with custom style
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/bottom-bar-2.png" width="280"/> 
+   
+   ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("FAB Example"),
+        ),
+            bottomNavigationBar: Theme(  // Create your custom style with Flutter Theme
+          data: Theme.of(context).copyWith(
+              canvasColor: Colors.blueAccent, // Choose your preferred color as the BottomNavigationBar background
+              primaryColor: Colors.white30, // Choose your preferred color as the primary color
+              textTheme: Theme.of(context) // The text theme goes here
+                  .textTheme
+                  .copyWith(caption: new TextStyle(color: Colors.white))),
+          child: BottomNavigationBar(
+            currentIndex: 0, // Set initial state of BottomNavigationBar
+            items: [          // Create your BottomNavigationBar items
+              BottomNavigationBarItem(
+                icon: new Icon(Icons.playlist_add),
+                title: new Text("Playlist"),
+              ),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.person), title: new Text("My Profile")),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.mail), title: new Text("Inbox"))
+            ],
+          ),
+        ),
+        body:...
+     );
+ ```
+ 
