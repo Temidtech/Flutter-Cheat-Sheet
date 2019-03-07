@@ -9,7 +9,6 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 - [Aligning widgets evenly](#aligning-widgets-evenly)
 - [Buttons](#buttons)
 - [Navigation](#navigation)
-- [Computer Science](#computer-science)
 
 
 ## 1. Layouts
