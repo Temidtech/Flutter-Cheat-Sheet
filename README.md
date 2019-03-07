@@ -5,7 +5,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
  
 ## Table of Contents
 
-- [Layouts](#layouts)
+- [Card Layout](#card-layout)
 - [Aligning widgets evenly](#aligning-widgets-evenly)
 - [Front-End Development](#front-end-development)
 - [Back-End Development](#back-end-development)
