@@ -11,7 +11,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 - [Navigation](#navigation)
 
 
-## 1. Layouts
+## Layouts
 
 ###   Card Layout
 
