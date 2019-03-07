@@ -357,7 +357,7 @@ class PlaceholderWidget extends StatelessWidget {
    );
  }
  ```
-Yaaaaaaaassssss!!!! We just did it! Take a look at the result
+#### Yaaaaaaaassssss!!!! We just did it! Take a look at the result
 <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-1.png" width="280"/> <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-2.png" width="280"/> 
  
  
