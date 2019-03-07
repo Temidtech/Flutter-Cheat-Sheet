@@ -254,3 +254,23 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
      );
  ```
  
+ ## Prepare for Navigation
+ 
+ You'd definetly want to navigate between multiple pages using bottom navigation bar. Here is how you can do that seamlessly!
+ 
+ #### Step 1:
+      Add two new instance properties to your State class. Something like this:
+         ```dart
+                 class _HomeState extends State<Home> {
+                    int _currentIndex = 0;
+                    final List<Widget> _children = [];
+                    ...
+          ```
+ 
+  #### Step 2:
+      Add two new instance properties to your State class. Something like this:
+         ```dart
+                int _currentIndex = 0;
+                final List<Widget> _children = [];
+          ```
+ 
