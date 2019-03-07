@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 }
   ```
   
-  ## 2. Aligning widgets evenly
+## 2. Aligning widgets evenly
   ###   Horizontal MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free horizontal space 
     evenly between, before, and after each image
