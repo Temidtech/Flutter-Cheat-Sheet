@@ -5,10 +5,10 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
  
 ## Table of Contents
 
-- [Card Layout](#card-layout)
+- [Layouts](#layouts)
 - [Aligning widgets evenly](#aligning-widgets-evenly)
-- [Front-End Development](#front-end-development)
-- [Back-End Development](#back-end-development)
+- [Buttons](#buttons)
+- [Navigation](#navigation)
 - [Computer Science](#computer-science)
 
 
@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
  ###   Vertical MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free vertical space 
     evenly between, before, and after each image
-  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img2.PNG)
+  ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/img2.PNG)
    ```dart
    Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
