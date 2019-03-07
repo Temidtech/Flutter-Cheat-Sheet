@@ -278,7 +278,8 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
   ];
  ```
   #### Step 3:
-      Create a function that will update the value of _currentIndex in your State class.It'd be called when user taps on a bottombar item. Something like this:
+      Create a function that will update the value of _currentIndex in your State class.
+      It'd be called when user taps on a bottombar item. Something like this:
  ```dart
     void onTabTapped(int index) {
    setState(() {
@@ -321,3 +322,42 @@ class PlaceholderWidget extends StatelessWidget {
   }
 }
  ```
+  #### Step 5:
+     Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
+ ```dart
+@override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(
+       title: Text('My Flutter App'),
+     ),
+     bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+              canvasColor: Colors.blueAccent,
+              primaryColor: Colors.white30,
+              textTheme: Theme.of(context)
+                  .textTheme
+                  .copyWith(caption: new TextStyle(color: Colors.white))),
+          child: BottomNavigationBar(
+            currentIndex: _currentIndex, // Set the value of _currentIndex to currentIndex
+            onTap: onTabTapped,       // Set the onTabTapped function we creatd earlier
+            items: [
+              BottomNavigationBarItem(
+                icon: new Icon(Icons.playlist_add),
+                title: new Text("Playlist"),
+              ),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.person), title: new Text("My Profile")),
+              BottomNavigationBarItem(
+                  icon: new Icon(Icons.mail), title: new Text("Inbox"))
+            ],
+          ),
+        ),
+        body:_children[_currentIndex] // Change Widget based on item selected
+   );
+ }
+ ```
+Yaaaaaaaassssss!!!! We just did it! Take a look at the result
+<img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-1.png" width="280"/> <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-2.png" width="280"/> 
+ 
+ 
