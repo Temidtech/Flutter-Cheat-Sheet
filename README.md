@@ -9,6 +9,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 - [Aligning widgets evenly](#aligning-widgets-evenly)
 - [Buttons](#buttons)
 - [Navigation](#navigation)
+- [Swipeable actionbar tabs](#tabs)
 
 
 ## Layouts
@@ -370,4 +371,40 @@ class PlaceholderWidget extends StatelessWidget {
 ##### Yaaaaaaaassssss!!!! We just did it! Take a look at the result
 <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-1.png" width="280"/> <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-2.png" width="280"/> 
  
+ 
+## Tabs
+
+Working with tabs is a common pattern in apps following the Material Design guidelines. 
+Flutter includes a convenient way to create tab layouts as part of the material library.
+To quickly implement tabs in your next project, follow these 3 steps:
+
+
+ ### Step 1
+    Create a TabController widget, which allows you to keep a selected tab and content sections in sync.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/tabs.gif" width="280"/> 
+   
+   ```dart
+         new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  new RaisedButton(
+                    padding: const EdgeInsets.all(8.0),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: onClick, // Button onClick function
+                    child: new Text("Plus"),
+                  ),
+                  new RaisedButton(
+                    onPressed: subtractNumbers,
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Text(
+                      "Minus",
+                    ),
+                  ),
+                ],
+              )
+ ```
  
