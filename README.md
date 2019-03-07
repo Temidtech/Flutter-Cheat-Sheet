@@ -12,9 +12,9 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 - [Computer Science](#computer-science)
 
 
-# 1. Layouts
+## 1. Layouts
 
-##   Card Layout
+###   Card Layout
 
 ```dart
 @override
@@ -54,8 +54,8 @@ Widget build(BuildContext context) {
 }
   ```
   
-  # 2. Aligning widgets evenly
-  ##   Horizontal MainAxisAlignment
+  ## 2. Aligning widgets evenly
+  ###   Horizontal MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free horizontal space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/img1.PNG)
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
   ],
 );
    ```
- ##   Vertical MainAxisAlignment
+ ###   Vertical MainAxisAlignment
     Setting the main axis alignment to spaceEvenly divides the free vertical space 
     evenly between, before, and after each image
   ![alt text](https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/img2.PNG)
@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
   ],
 );
  ```
- ##   Packing Widgets
+ ###   Packing Widgets
     By default, a row or column occupies as much space along its main axis as possible,
     but if you want to pack the children closely together, set its mainAxisSize to MainAxisSize.min. 
     The following example uses this property to pack 3 buttons together.
@@ -123,8 +123,8 @@ Widget build(BuildContext context) {
               )
  ```
  
- # 3. Buttons
- ##  Raised Button Effect
+ ## 3. Buttons
+ ###  Raised Button Effect
     A Raised button is based on a Material widget whose Material.elevation increases when the button is pressed.
     Do you want to add an elevation effect to your button? Use the snippet below
     Please avoid using elevated buttons on already-elevated content such as dialogs or cards.
@@ -154,7 +154,7 @@ Widget build(BuildContext context) {
                 ],
               )
  ```
-  ##  Toggle Effect
+  ###  Toggle Effect
     You can toggle the color of a raised button with few lines. The snippet below shows how you can achieve this.
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/toggle-button.png" width="280"/> 
@@ -179,7 +179,7 @@ Widget build(BuildContext context) {
               )
  ```
  
-  ##  Floating Action Button
+  ###  Floating Action Button
     Creating a simple FAB using the code snippet below
     
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/fab-button.png" width="280"/> 
@@ -198,13 +198,13 @@ Widget build(BuildContext context) {
      );
  ```
 
- # 3. Navigation
+ ## 3. Navigation
  
 
-## Bottom Navigation Bar
+### Bottom Navigation Bar
 Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd write some complex code to make this happen. But see how I achieved it!
 
-### Create a Bottom Navigation Bar without style
+#### Create a Bottom Navigation Bar without style
 <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-1.png" width="280"/> 
    
    ```dart
@@ -232,7 +232,7 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
         body:...
      );
  ```
- ### Create a Bottom Navigation Bar with custom style
+ #### Create a Bottom Navigation Bar with custom style
 <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-bar-2.png" width="280"/> 
    
    ```dart
@@ -265,11 +265,11 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
      );
  ```
  
- ## Prepare for Navigation
+ ### Prepare for Navigation
  
  You'd definetly want to navigate between multiple pages using bottom navigation bar. Here is how you can do that seamlessly!
  
- #### Step 1:
+ ##### Step 1:
       Add two new instance properties to your State class. Something like this:
  ```dart
        class _FreeDemoState extends State<FreeDemo> {
@@ -278,7 +278,7 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
              ...
  ```
  
-  #### Step 2:
+  ##### Step 2:
       Add children to a list in your State class. Something like this:
  ```dart
     // Declare all the widgets you want to navigate on bottom bar item click
@@ -288,7 +288,7 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
     PlaceholderWidget(Colors.blue)
   ];
  ```
-  #### Step 3:
+  ##### Step 3:
       Create a function that will update the value of _currentIndex in your State class.
       It'd be called when user taps on a bottombar item. Something like this:
  ```dart
@@ -299,7 +299,7 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
  }
  ```
  
- #### Step 4:
+ ##### Step 4:
      Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
  ```dart
 import 'package:flutter/material.dart';
@@ -333,7 +333,7 @@ class PlaceholderWidget extends StatelessWidget {
   }
 }
  ```
-  #### Step 5:
+  ##### Step 5:
      Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
  ```dart
 @override
@@ -368,7 +368,7 @@ class PlaceholderWidget extends StatelessWidget {
    );
  }
  ```
-#### Yaaaaaaaassssss!!!! We just did it! Take a look at the result
+##### Yaaaaaaaassssss!!!! We just did it! Take a look at the result
 <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-1.png" width="280"/> <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/bottom-tap-2.png" width="280"/> 
  
  
