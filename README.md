@@ -260,12 +260,12 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
  
  #### Step 1:
       Add two new instance properties to your State class. Something like this:
-         ```dart
+       ```dart
                  class _HomeState extends State<Home> {
                     int _currentIndex = 0;
                     final List<Widget> _children = [];
                     ...
-          ```
+       ```
  
   #### Step 2:
       Add two new instance properties to your State class. Something like this:
