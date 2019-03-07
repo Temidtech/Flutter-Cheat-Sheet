@@ -261,16 +261,63 @@ Creating bottom navigation in flutter is fatanstic, truth be told! I thought I'd
  #### Step 1:
       Add two new instance properties to your State class. Something like this:
  ```dart
-       class _HomeState extends State<Home> {
+       class _FreeDemoState extends State<FreeDemo> {
               int _currentIndex = 0;
               final List<Widget> _children = [];
              ...
  ```
  
   #### Step 2:
-      Add two new instance properties to your State class. Something like this:
-         ```dart
-                int _currentIndex = 0;
-                final List<Widget> _children = [];
-          ```
+      Add children to a list in your State class. Something like this:
+ ```dart
+    // Declare all the widgets you want to navigate on bottom bar item click
+    final List<Widget> _children = [
+    PlaceholderWidget(Colors.white), 
+    PlaceholderWidget(Colors.green),
+    PlaceholderWidget(Colors.blue)
+  ];
+ ```
+  #### Step 3:
+      Create a function that will update the value of _currentIndex in your State class.It'd be called when user taps on a bottombar item. Something like this:
+ ```dart
+    void onTabTapped(int index) {
+   setState(() {
+     _currentIndex = index;
+   });
+ }
+ ```
  
+ #### Step 4:
+     Create a class called PlaceholderWidget.This widget will be displayed when Bottom bar is tapped.
+ ```dart
+import 'package:flutter/material.dart';
+
+class PlaceholderWidget extends StatelessWidget {
+  final Color color;
+
+  PlaceholderWidget(this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
+      child: new Center(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text(
+              'Try me!',
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 100.0,
+                fontFamily: 'Roboto',
+              ),
+            ),
+           ...
+          ],
+        ),
+      ),
+    );
+  }
+}
+ ```
