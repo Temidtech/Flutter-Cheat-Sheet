@@ -382,29 +382,69 @@ To quickly implement tabs in your next project, follow these 3 steps:
  ### Step 1
     Create a TabController widget, which allows you to keep a selected tab and content sections in sync.
     
+   
+   ```dart
+ return MaterialApp(
+      home: DefaultTabController(
+        length: 3, // The number of tabs / content sections we need to display
+        child:.. // See next step!
+      ),
+    );
+ ```
+  ### Step 2
+    Now we can create 3 tabs for the TabController we initialized earlier using TabBar!
+    
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/tabs.gif" width="280"/> 
    
    ```dart
-         new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  new RaisedButton(
-                    padding: const EdgeInsets.all(8.0),
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    onPressed: onClick, // Button onClick function
-                    child: new Text("Plus"),
-                  ),
-                  new RaisedButton(
-                    onPressed: subtractNumbers,
-                    textColor: Colors.white,
-                    color: Colors.red,
-                    padding: const EdgeInsets.all(8.0),
-                    child: new Text(
-                      "Minus",
-                    ),
-                  ),
-                ],
-              )
+       return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.people)),
+                Tab(icon: Icon(Icons.mail)),
+              ],
+            ),
+            title: Text('Flutter Tabs Example'), // You can declare a title for your tab
+          ),
+          body: ... // See next step for this!
+        ),
+      ),
+    );
  ```
- 
+  ### Step 3
+    Now that we have tabs, we’ll want to display content when a tab is selected. 
+    For this demo, we’ll employ the TabBarView Widget.
+    
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/tabs.gif" width="280"/> 
+   
+   ```dart
+            return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.people)),
+                Tab(icon: Icon(Icons.mail)),
+              ],
+            ),
+            title: Text('Flutter Tabs Example'),
+          ),
+          body: TabBarView(
+            children: [
+              FirstPlaceHolder(), // Create a widget class called FirstPlaceHolder
+              SecondPlaceHolder(), // Create a widget class called SecondPlaceHolder
+              ThirdPlaceHolder() //// Create a widget class called ThirdPlaceHolder
+            ],
+          ),
+        ),
+      ),
+    );
+ ```
