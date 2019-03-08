@@ -454,12 +454,139 @@ To quickly implement tabs in your next project, follow these 3 steps:
  ## Form Validations
 
 Mobile developers often require users to enter information into a text field. For example, you might be working on an app that requires your users to log in with an email address and password combination. Let's see how we can achieve this without necessarily importing a 3rd party library! Super cool right?
+
  <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/validation.gif" width="280"/> 
- ### Email validation
  
-
-
- ### Username validation
+ You want something like this on your App? Here is how you can achieve this in few lines!
  
- ### Password validation with hide/show button
+  ```dart
+  
+  class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final appTitle = 'Form Validation Demo';
 
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(appTitle),
+        ),
+        body: SingleChildScrollView(
+          child: ValidationDemo(),
+        )
+      ),
+    );
+  }
+}
+
+class ValidationDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new ValidationDemoState();
+  }
+}
+
+class ValidationDemoState extends State<ValidationDemo> {
+  // Note: This is a GlobalKey<FormState>, not a GlobalKey<MyCustomFormState>!
+  final _formKey = GlobalKey<FormState>();
+  // Declare a default
+  bool isPasswordVisible = false;
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: new EdgeInsets.all(15.0),
+      child: new Form(
+        key: _formKey,
+        child: formUI(),
+      ),
+    );
+  }
+
+  Widget formUI() {
+    return new Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        new TextFormField(
+          decoration: const InputDecoration(labelText: 'Username'),
+          validator: (value) {
+            if (value.isEmpty) {
+              return 'Username field cannot be empty';
+            }
+          },
+        ),
+        new TextFormField(
+          decoration: const InputDecoration(labelText: 'Email'),
+          validator: _validateEmail,
+          keyboardType: TextInputType.emailAddress,
+        ),
+        new TextFormField(
+          keyboardType: TextInputType.text,
+          validator: _validatePassword,
+          obscureText: isPasswordVisible, //This will obscure text dynamically
+          decoration: InputDecoration(
+            labelText: 'Password',
+            hintText: 'Enter your password',
+            // Here is key idea
+            suffixIcon: IconButton(
+              icon: Icon(
+                // Based on passwordVisible state choose the icon
+                isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                color: Theme.of(context).primaryColorDark,
+              ),
+              onPressed: () {
+                // Update the state i.e. toogle the state of passwordVisible variable
+                setState(() {
+                  isPasswordVisible
+                      ? isPasswordVisible = false
+                      : isPasswordVisible = true;
+                });
+              },
+            ),
+          ),
+        ),
+        Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: RaisedButton(
+              onPressed: () {
+                if (_formKey.currentState.validate()) {
+                  Scaffold.of(context)
+                      .showSnackBar(SnackBar(content: Text('Processing data')));
+                }
+              },
+              child: Text('Submit'),
+            ))
+      ],
+    );
+  }
+
+  String _validateEmail(String value) {
+    if (value.isEmpty) {
+      return 'Email field cannot be empty!';
+    }
+    // Regex for email validation
+    String p = "[a-zA-Z0-9\+\.\_\%\-\+]{1,256}" +
+        "\\@" +
+        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+        "(" +
+        "\\." +
+        "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+        ")+";
+    RegExp regExp = new RegExp(p);
+    if (regExp.hasMatch(value)) {
+      return null;
+    }
+    return 'Email provided isn\'t valid.Try another email address';
+  }
+  String _validatePassword(String value){
+    if(value.isEmpty){
+      return 'Password field cannot be empty';
+    }
+
+    if(value.length<6){
+      return 'Password length must be greater than 6';
+    }
+  }
+}
+
+  ```
