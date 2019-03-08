@@ -488,32 +488,29 @@ class ValidationDemo extends StatefulWidget {
 }
 
 class ValidationDemoState extends State<ValidationDemo> {
-  // Note: This is a GlobalKey<FormState>, not a GlobalKey<MyCustomFormState>!
+  // Note: This is a GlobalKey<FormState>, not a GlobalKey<ValidationDemoState>!
   final _formKey = GlobalKey<FormState>();
-  // Declare a default
+  // Declare a default bool variable isPasswordVisible and initialize to false. 
+  // This is the default state of the password visibilty.
   bool isPasswordVisible = false;
   @override
   Widget build(BuildContext context) {
     return new Container(
       margin: new EdgeInsets.all(15.0),
       child: new Form(
-        key: _formKey,
-        child: formUI(),
+        key: _formKey, // Set the _formKey here
+        child: formUI(), // Set your custom widget here
       ),
     );
   }
-
+ // Build a custom widget for your app
   Widget formUI() {
     return new Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         new TextFormField(
-          decoration: const InputDecoration(labelText: 'Username'),
-          validator: (value) {
-            if (value.isEmpty) {
-              return 'Username field cannot be empty';
-            }
-          },
+          decoration: const InputDecoration(labelText: 'Username'), // Create an optional decoration for your TextFormField
+          validator: _validateUsername,
         ),
         new TextFormField(
           decoration: const InputDecoration(labelText: 'Email'),
@@ -578,13 +575,22 @@ class ValidationDemoState extends State<ValidationDemo> {
     }
     return 'Email provided isn\'t valid.Try another email address';
   }
-  String _validatePassword(String value){
+   _validatePassword(String value){
     if(value.isEmpty){
       return 'Password field cannot be empty';
     }
 
     if(value.length<6){
       return 'Password length must be greater than 6';
+    }
+  }
+   _validateUsername(String value){
+    if(value.isEmpty){
+      return 'Username  cannot be empty';
+    }
+
+    if(value.length<6){
+      return 'Username length must be greater than 6';
     }
   }
 }
