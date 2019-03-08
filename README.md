@@ -454,4 +454,12 @@ To quickly implement tabs in your next project, follow these 3 steps:
  ## Form Validations
 
 Mobile developers often require users to enter information into a text field. For example, you might be working on an app that requires your users to log in with an email address and password combination. Let's see how we can achieve this without necessarily importing a 3rd party library! Super cool right?
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/validation.gif" width="280"/> 
+ ### Email validation
+ 
+
+
+ ### Username validation
+ 
+ ### Password validation with hide/show button
 
