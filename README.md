@@ -16,10 +16,10 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 
 
 
-
 ## Installation
 
 ###   Windows
+#### STEP 1
 To get started with Flutter, your dev environment must meet the following requirements
 
 | Operating Systems        | Windows 7 SP1 or later (64-bit)           |
@@ -29,6 +29,10 @@ To get started with Flutter, your dev environment must meet the following requir
 | Tool | Git for Windows 2.x     |
 
 You can choose either the first tool or second depending on how comfortable you are with either.
+
+#### STEP 2
+
+- Download an installation bundle [here](https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.2.1-stable.zip) to get the latest stable release of the Flutter SDK
 ###   Mac
 
 
