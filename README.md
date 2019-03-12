@@ -65,7 +65,7 @@ Ensure you check the output carefully for other software you may need to install
 
 #### Android setup
 
-You will be wondering why we need android studio setup?Here is why:
+Wondering why we need android studio setup?Here is why:
 Flutter relies on a full installation of Android Studio to supply its Android platform dependencies.You can however write flutter apps on other IDEs such as Visual studio code.
 
 ##### Install Android Studio
