@@ -24,10 +24,10 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 | Operating Systems        | Windows 7 SP1 or later (64-bit)           |
 | ------------- |:-------------:|
 | Disk Space     | 400 MB (does not include disk space for IDE/tools) |
-| Tools    | Windows PowerShell 5.0 or newer      |
-| zebra stripes | are neat      |
+| Tool    | Windows PowerShell 5.0 or newer      |
+| Tool | Git for Windows 2.x     |
 
-
+You can choose either the first tool or second depending on how comfortable you are with either.
 ###   Mac
 
 
