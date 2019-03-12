@@ -63,7 +63,7 @@ If at any point you need to check your environment and see a report of the statu
  ```
 Ensure you check the output carefully for other software you may need to install or further tasks to perform (shown in bold text).
 
-## Android setup
+#### Android setup
 
 
 ###  B. Mac
