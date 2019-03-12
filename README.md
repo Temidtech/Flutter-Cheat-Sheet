@@ -88,6 +88,21 @@ First thing first, to prepare to run and test your Flutter app on an Android dev
 - Using a USB cable, plug your phone into your computer. If prompted on your device, authorize your computer to access your device.
 - In your android studio terminal or command prompt, run the ``` flutter devices``` command to verify that Flutter recognizes your connected Android device.
 
+#### Set up the Android emulator
+To prepare to run and test your Flutter app on the Android emulator for some reasons :), follow these steps:
+
+- Enable VM acceleration on your machine.
+- Launch **Android Studio > Tools > Android > AVD Manager** and select Create Virtual Device. (The Android submenu is only present when inside an Android project.)
+- Choose a device definition and select **Next**.
+- Select one or more system images for the Android versions you want to emulate, and select **Next**. An x86 or x86_64 image is recommended.
+- Under Emulated Performance, select **Hardware - GLES 2.0** to enable hardware acceleration.
+- Verify the AVD configuration is correct, and select Finish.
+
+
+In Android Virtual Device Manager, click **Run** in the toolbar. The emulator starts up and displays the default canvas for your selected OS version and device.
+
+
+
 ## Layouts
 
 ###   Card Layout
