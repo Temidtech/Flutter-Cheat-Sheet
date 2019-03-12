@@ -65,9 +65,28 @@ Ensure you check the output carefully for other software you may need to install
 
 #### Android setup
 
+You will be wondering why we need android studio setup?Here is why:
+Flutter relies on a full installation of Android Studio to supply its Android platform dependencies.You can however write flutter apps on other IDEs such as Visual studio code.
 
-###  B. Mac
+##### Install Android Studio
+- Download and install Android Studio from [here](https://developer.android.com/studio/?gclid=Cj0KCQjwsZ3kBRCnARIsAIuAV_RMbMDTLk-O1LOvm7MXD_o2diOYLqz4KPIBrpfUnw_2fAuE44y5K5waAt5EEALw_wcB).
 
+  ![alt text](https://developer.android.com/studio/images/studio-homepage-hero.jpg)
+  
+- Launch Android Studio, and go through the ‘Android Studio Setup Wizard’. This installs the latest Android SDK, Android SDK Platform-Tools, and Android SDK Build-Tools, which are required by Flutter when developing for Android.
+
+
+##### Set up your Android device
+One of the coolest thing about Flutter is that you can run your Flutter app on android device without writing complex commands. Here is how I did it.
+
+First thing first, to prepare to run and test your Flutter app on an Android device, you’ll need an Android device running **Android 4.1 (API level 16) or higher**.
+
+**Other necessary steps to follow:**
+
+- Enable Developer options and USB debugging on your device. **Go to Settings > Developer options >USB debugging**.
+- Windows-only: Install the Google USB Driver
+- Using a USB cable, plug your phone into your computer. If prompted on your device, authorize your computer to access your device.
+- In your android studio terminal or command prompt, run the ``` flutter devices``` command to verify that Flutter recognizes your connected Android device.
 
 ## Layouts
 
