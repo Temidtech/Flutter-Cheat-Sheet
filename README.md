@@ -63,7 +63,7 @@ If at any point you need to check your environment and see a report of the statu
  ```
 Ensure you check the output carefully for other software you may need to install or further tasks to perform (shown in bold text).
 
-#### Android setup
+### Android setup
 
 Wondering why we need android studio setup?Here is why:
 Flutter relies on a full installation of Android Studio to supply its Android platform dependencies.You can however write flutter apps on other IDEs such as Visual studio code.
