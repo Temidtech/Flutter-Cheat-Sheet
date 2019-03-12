@@ -21,9 +21,12 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 
 ###   Windows
       To get started with Flutter, your dev environment must meet the following requirements
-      Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
-      --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-      Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+| Operating Systems        | Windows 7 SP1 or later (64-bit)           |
+| ------------- |:-------------:|
+| Disk Space     | 400 MB (does not include disk space for IDE/tools) |
+| Tools    | Windows PowerShell 5.0 or newer      |
+| zebra stripes | are neat      |
+
 
 ###   Mac
 
