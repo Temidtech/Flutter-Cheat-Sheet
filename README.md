@@ -18,7 +18,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 
 ## Installation
 
-###   Windows
+###  A. Windows
 #### STEP 1
 To get started with Flutter, your dev environment must meet the following requirements
 
@@ -63,10 +63,10 @@ If at any point you need to check your environment and see a report of the statu
  ```
 Ensure you check the output carefully for other software you may need to install or further tasks to perform (shown in bold text).
 
-###   Mac
+## Android setup
 
 
-
+###  B. Mac
 
 
 ## Layouts
