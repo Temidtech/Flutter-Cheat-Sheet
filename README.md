@@ -33,7 +33,20 @@ You can choose either the first tool or second depending on how comfortable you 
 #### STEP 2
 
 - Download an installation bundle [here](https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.2.1-stable.zip) to get the latest stable release of the Flutter SDK
-- Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter;  ~~do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges ~~).
+- Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter;  do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges ).
+- Locate the file flutter_console.bat inside the flutter directory. Start it by double-clicking.
+
+Congratulations! You are now ready to run Flutter commands in the Flutter Console!
+
+NOTE: Should you at anytime require an ugrade to a latest Flutter version? [Use this link](https://flutter.dev/docs/development/tools/sdk/upgrading)
+
+
+#### STEP 3 (Optional)
+
+If you wish to run Flutter commands in the regular Windows console, take these steps to add Flutter to the PATH environment variable:
+- From the Start search bar, type ‘env’ and select Edit environment variables for your account
+- Under User variables check if there is an entry called Path(If it exist append the full path to flutter\bin using ; as a separator from existing values else create a new user variable named Path with the full path to flutter\bin as its value)
+
 ###   Mac
 
 
