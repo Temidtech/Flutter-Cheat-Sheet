@@ -33,6 +33,7 @@ You can choose either the first tool or second depending on how comfortable you 
 #### STEP 2
 
 - Download an installation bundle [here](https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_v1.2.1-stable.zip) to get the latest stable release of the Flutter SDK
+- Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (eg. C:\src\flutter;  ~~do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges ~~).
 ###   Mac
 
 
