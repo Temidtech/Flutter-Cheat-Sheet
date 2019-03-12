@@ -47,6 +47,22 @@ If you wish to run Flutter commands in the regular Windows console, take these s
 - From the Start search bar, type ‘env’ and select Edit environment variables for your account
 - Under User variables check if there is an entry called Path(If it exist append the full path to flutter\bin using ; as a separator from existing values else create a new user variable named Path with the full path to flutter\bin as its value)
 
+
+#### STEP 4
+If at any point you need to check your environment and see a report of the status of your Flutter installation, all you need is the command below. 
+```windows
+ flutter doctor
+ ```
+ Here is a sample output:
+ ```windows
+[-] Android toolchain - develop for Android devices
+    • Android SDK at D:\Android\sdk
+    ✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
+    • Try re-installing or updating your Android SDK,
+      visit https://flutter.dev/setup/#android-setup for detailed instructions.
+ ```
+Ensure you check the output carefully for other software you may need to install or further tasks to perform (shown in bold text).
+
 ###   Mac
 
 
