@@ -21,6 +21,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 
 ###   Windows
 To get started with Flutter, your dev environment must meet the following requirements
+
 | Operating Systems        | Windows 7 SP1 or later (64-bit)           |
 | ------------- |:-------------:|
 | Disk Space     | 400 MB (does not include disk space for IDE/tools) |
