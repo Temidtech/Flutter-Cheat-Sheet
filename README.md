@@ -101,6 +101,65 @@ To prepare to run and test your Flutter app on the Android emulator for some rea
 
 In Android Virtual Device Manager, click **Run** in the toolbar. The emulator starts up and displays the default canvas for your selected OS version and device.
 
+###  B. Mac
+#### STEP 1
+To get started with Flutter, your dev environment must meet the following requirements
+
+| Operating Systems        | macOS (64-bit)           |
+| ------------- |:-------------:|
+| Disk Space     | 700 MB (does not include disk space for IDE/tools) |
+| Tool    | bash, curl, git 2.x, mkdir, rm, unzip, which|
+
+NOTE: You can pick any tool you are comfortable with.
+
+#### STEP 2
+
+- Download an installation bundle [here](https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.2.1-stable.zip) to get the latest stable release of the Flutter SDK
+- Extract the file in the desired location.
+```windows
+ cd ~/development
+ unzip ~/Downloads/flutter_macos_v1.2.1-stable.zip
+ ```
+- Add the flutter tool to your path.
+```windows
+ export PATH="$PATH:`pwd`/flutter/bin"
+ ```
+This command sets your PATH variable for the current terminal window only. 
+
+To permanently add Flutter to your path, follow the steps below:
+
+- Determine the directory where you placed the Flutter SDK.
+- Open (or create) $HOME/.bash_profile. The file path and filename might be different on your machine.
+- Add the following line and change [PATH_TO_FLUTTER_GIT_DIRECTORY] to be the path where you cloned Flutter’s git repo:
+```windows
+ export PATH="$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]/flutter/bin"
+ ```
+- Run source $HOME/.bash_profile to refresh the current window.
+- Verify that the flutter/bin directory is now in your PATH by running:
+```windows
+ echo $PATH
+ ```
+Congratulations! You are now ready to run Flutter commands in the Flutter Console!
+
+NOTE: Should you at anytime require an ugrade to a latest Flutter version? [Use this link](https://flutter.dev/docs/development/tools/sdk/upgrading)
+
+
+#### STEP 3 (Optional)
+If at any point you need to check your environment and see a report of the status of your Flutter installation, all you need is the command below. 
+```windows
+ flutter doctor
+ ```
+ Here is a sample output:
+ ```windows
+[-] Android toolchain - develop for Android devices
+    • Android SDK at D:\Android\sdk
+    ✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
+    • Try re-installing or updating your Android SDK,
+      visit https://flutter.dev/setup/#android-setup for detailed instructions.
+ ```
+Ensure you check the output carefully for other software you may need to install or further tasks to perform (shown in bold text).
+
+
 
 
 ## Layouts
