@@ -599,6 +599,105 @@ To quickly implement tabs in your next project, follow these 3 steps:
     );
  ```
  
+ ## Navigation Drawer
+
+There are situations whereby there won't be insufficient space to support tabs. Drawers provide a handy alternative at this point.
+In Flutter, we can use the Drawer Widget in combination with a Scaffold to create a layout with a Material Design Drawer.
+
+ <img src="https://github.com/Temidtech/Flutter-Cheat-Sheet/blob/master/screenshots/navigation-drawer.gif" width="280"/> 
+ 
+ The code snippet below shows you how to get this done quickly.
+   
+ ```dart
+import 'package:flutter/material.dart';
+import 'package:oamp/app/screens/form_validation.dart';
+import 'package:oamp/app/screens/place_holder.dart';
+
+class FreeDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new FreeDemoState();
+  }
+}
+
+class FreeDemoState extends State<FreeDemo>
+    with SingleTickerProviderStateMixin {
+  int _selectedIndex = 0;
+
+  final drawerItems = [
+    new DrawerItem("Home", Icons.home),
+    new DrawerItem("Menu", Icons.fastfood),
+    new DrawerItem("Favorites", Icons.favorite)
+  ];
+  _getDrawerItemScreen(int pos) {
+    return new PlaceholderWidget(Colors.white);
+  }
+
+  _onSelectItem(int index) {
+    setState(() {
+      _selectedIndex = index;
+      _getDrawerItemScreen(_selectedIndex);
+    });
+    Navigator.of(context).pop(); // close the drawer
+  }
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> drawerOptions =[];
+    for(var i=0; i<drawerItems.length;i++){
+      var d=drawerItems[i];
+      drawerOptions.add(new ListTile(
+        leading: new Icon(d.icon),
+        title: new Text(
+          d.title,
+          style: new TextStyle(fontSize: 19.0, fontWeight: FontWeight.w400),
+        ),
+        selected: i == _selectedIndex,
+        onTap: () =>_onSelectItem(i),
+      ));
+    }
+    return Scaffold(
+          appBar: AppBar(
+            title: Text('Navigation Drawer Example'),
+          ),
+          drawer: new Drawer(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: <Widget>[
+                new UserAccountsDrawerHeader(
+                    accountName: new Text(
+                      "Temidayo Adefioye",
+                      style: new TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18.0
+                      ),
+                    ),
+                    accountEmail: Text(
+                      "temidjoy@gmail.com",
+                      style: new TextStyle(
+                        fontSize: 18.0, fontWeight: FontWeight.w500
+                      ),
+                    ),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text('TA'),
+                ),),
+                new Column(children: drawerOptions,)
+              ],
+            ),
+          ),
+          body: _getDrawerItemScreen(_selectedIndex),
+    );
+  }
+}
+class DrawerItem {
+  String title;
+  IconData icon;
+
+  DrawerItem(this.title, this.icon);
+} 
+```
+ 
+ 
  ## Form Validations
 
 Mobile developers often require users to enter information into a text field. For example, you might be working on an app that requires your users to log in with an email address and password combination. Let's see how we can achieve this without necessarily importing a 3rd party library! Super cool right?
