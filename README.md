@@ -11,6 +11,7 @@ You need to get started quickly with Flutter? Here are some cheats that will hel
 - [Aligning widgets evenly](#aligning-widgets-evenly)
 - [Buttons](#buttons)
 - [Navigation](#navigation)
+- [ActionBar](#actionbar)
 - [Swipeable actionbar tabs](#tabs)
 - [Form validations](#form-validations)
 
@@ -347,7 +348,17 @@ Widget build(BuildContext context) {
         body:...
      );
  ```
-
+ ## ActionBar
+ You can use flutter's AppBar just with one line of code.
+ 
+  ```dart
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text("AppBar Demo"),
+        ),);
+        
+   ```    
+ 
  ## Navigation
  
 
